@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Password Generator</title>
+        <title>Coding Quiz Game</title>
         <link rel="stylesheet" href="./Assets/css/style.css">
     </head>
 
@@ -13,12 +13,12 @@
 
         <header>
             <nav>
-                <a href="#">View Highscores</a>
+                <a href="#" id="highscorelog">View Highscores</a>
             </nav>
             <h1>Time: <span id="countdown"></span></h1>
         </header>
 
-        <main>
+        <main id="homepage">
             <h2>Coding Quiz Challenge</h2>
             <p>
                 Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize
@@ -26,6 +26,30 @@
             </p>
             <button id="start">Start Quiz</button>
         </main>
+
+        <div id="quizpage">
+            <div id="quizquestion"><p>Question</p></div>
+                <button id="buttonA" onclick="checkAnswer('A')">A</button>
+                <button id="buttonB" onclick="checkAnswer('B')">B</button>
+                <button id="buttonC" onclick="checkAnswer('C')">C</button>
+                <button id="buttonD" onclick="checkAnswer('D')">D</button>
+            <div id="result"></div>
+        </div>
+
+        <div id="scoreboard">
+            <h1>Game Over!</h1>
+            <div id="score"></div>
+            <label for="initials">Initials:</label><br>
+            <input type="text" id="initials" name="initials">
+            <input id="submitScore" type="submit" value="Submit">
+        </div>
+
+        <div id="highscorepage">
+            <div id="highscorerankings"> </div>
+            <button id="clearscores">Clear HighScores</button>
+            <button id="startover">Play Again</button>
+        </div>
+
 
 
 
