@@ -29,22 +29,25 @@
 
         <div id="quizpage">
             <div id="quizquestion"><p>Question</p></div>
-                <button id="buttonA" onclick="checkAnswer('A')">A</button>
-                <button id="buttonB" onclick="checkAnswer('B')">B</button>
-                <button id="buttonC" onclick="checkAnswer('C')">C</button>
-                <button id="buttonD" onclick="checkAnswer('D')">D</button>
+                <button id="buttonA" class="btn" onclick="checkAnswer('A')">A</button>
+                <button id="buttonB" class="btn" onclick="checkAnswer('B')">B</button>
+                <button id="buttonC" class="btn" onclick="checkAnswer('C')">C</button>
+                <button id="buttonD" class="btn" onclick="checkAnswer('D')">D</button>
+                </br>
             <div id="result"></div>
         </div>
 
         <div id="scoreboard">
             <h1>Game Over!</h1>
             <div id="score"></div>
-            <label for="initials">Initials:</label><br>
-            <input type="text" id="initials" name="initials">
+            <!-- <label for="initials">Initials:</label><br> -->
+            <label id="initialtext" for="initials">Enter Your Initials: </label></br>
+            <input type="text" id="initials" name="initials"></br>
             <input id="submitScore" type="submit" value="Submit">
         </div>
 
         <div id="highscorepage">
+            <h2>High Score Rankings</h2>
             <div id="highscorerankings"> </div>
             <button id="clearscores">Clear HighScores</button>
             <button id="startover">Play Again</button>
@@ -55,7 +58,7 @@
 
 
         
-    <script src="./Assets/js/script.js"></script>
+        <script src="./Assets/js/script.js"></script>
     </body>
 
 
