@@ -33,6 +33,7 @@ var timerCount;
 var correctAnswer;
 var highscoreData;
 
+// Object containing all of the quiz questions, their options, and the correct answer
 var questions = [
     {
         title: "1. Commonly used data types DO NOT include:",
@@ -80,6 +81,7 @@ var questions = [
 var finalQuestionIndex = questions.length;
 var currentQuestionIndex;
 
+// Function to display question 
 function generateQuestion(){
     quizQuestionsEl.style.display="block";
 
@@ -95,6 +97,8 @@ function generateQuestion(){
     button4.innerHTML = currentQuestion.optionD;
 };
 
+// This function checks to see if the selected option is the correct one, and adjusts score and time accordingly.
+// This function also increases the question index to make sure the next question is displayed after selecting an answer.
 function checkAnswer (answer) {
     correctAnswer = questions[currentQuestionIndex].correct;
 
@@ -126,6 +130,7 @@ function checkAnswer (answer) {
     }
 }
 
+// Function that is called when user clicks the start button on main page
 function startQuiz () { 
     scoreInfoEl.style.display="none";
     highscorePageEl.style.display = "none";
@@ -139,7 +144,7 @@ function startQuiz () {
     startTimer()
     generateQuestion();
 }
-
+// Timer function to ensure the timer counts for from 75
 function startTimer() {
     timeCountdownEl.textContent = timerCount;
     // Sets timer
@@ -164,6 +169,7 @@ function startTimer() {
 
 }
 
+// Function to display and store the users score and prompt user to enter their initials
 function setScore() {
     quizQuestionsEl.style.display="none";
     scoreInfoEl.style.display="block";
@@ -172,6 +178,7 @@ function setScore() {
     localStorage.setItem("scoreCount", score);
 }
 
+// Displays all the logged highscores through the use of a for loop to loop through the highscoreData array
 function getHighScores () {
     scoreInfoEl.style.display="none";
     quizQuestionsEl.style.display="none";
