@@ -106,7 +106,7 @@ function displayStatus (status){
 
     setTimeout(function(){
         quesResultEl.innerHTML = "";
-    }, 2500);
+    }, 1500);
 };
 
 // This function checks to see if the selected option is the correct one, and adjusts score and time accordingly.
@@ -117,12 +117,6 @@ function checkAnswer (answer) {
     if (answer === correctAnswer && currentQuestionIndex !== finalQuestionIndex){
         currentQuestionIndex++;
         displayStatus("That is correct!");
-
-        quesResultEl.style.borderTop = "2px solid rgb(189, 189, 189)";
-        quesResultEl.style.color = "rgb(189, 189, 189)";
-        quesResultEl.style.marginLeft= "280px";
-        quesResultEl.style.marginRight= "280px";
-        quesResultEl.style.paddingTop = "20px";
         score++;
 
         generateQuestion();
@@ -132,12 +126,6 @@ function checkAnswer (answer) {
         score--;
         currentQuestionIndex++;
         displayStatus("That is incorrect.");
-
-        quesResultEl.style.borderTop = "2px solid rgb(189, 189, 189)";
-        quesResultEl.style.color = "rgb(189, 189, 189)";
-        quesResultEl.style.marginLeft= "280px";
-        quesResultEl.style.marginRight= "280px";
-        quesResultEl.style.paddingTop = "20px";
 
         generateQuestion();
     }

@@ -110,6 +110,10 @@ header h1 {
     margin-top:12px;
 }
 
+#scoreboard h2 {
+    font-size: 30px;
+}
+
 #clearscores, #startover {
     font-weight: bolder;
     background-color: rgb(162, 157, 233);
@@ -125,11 +129,11 @@ header h1 {
     list-style: none;
 }
 
-.displayResult {
-    border-top: 2px, solid, rgb(189, 189, 189);
-    text: rgb(189, 189, 189);
+.resultDisplay {
+    border-top: 2px solid rgb(189, 189, 189);
+    color: rgb(189, 189, 189);
     font-weight: bolder;
-    margin-left: 280px;
-    margin-right: 280px;
+    margin-left: 300px;
+    margin-right: 300px;
     padding-top: 20px;
 }
