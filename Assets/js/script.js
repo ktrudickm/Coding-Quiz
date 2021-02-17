@@ -83,7 +83,8 @@ var currentQuestionIndex;
 
 // Function to display question 
 function generateQuestion(){
-    quizQuestionsEl.style.display="block";
+    quizQuestionsEl.style.visibility="visible";
+    
 
     if (currentQuestionIndex === finalQuestionIndex){
         return setScore();
@@ -97,6 +98,17 @@ function generateQuestion(){
     button4.innerHTML = currentQuestion.optionD;
 };
 
+//Function to diplay incorrect/correct & then make it disappear after 2.5 seconds.
+function displayStatus (status){
+    quesResultEl.innerHTML = status;
+
+    quesResultEl.classList.add("resultDisplay");
+
+    setTimeout(function(){
+        quesResultEl.innerHTML = "";
+    }, 2500);
+};
+
 // This function checks to see if the selected option is the correct one, and adjusts score and time accordingly.
 // This function also increases the question index to make sure the next question is displayed after selecting an answer.
 function checkAnswer (answer) {
@@ -104,25 +116,29 @@ function checkAnswer (answer) {
 
     if (answer === correctAnswer && currentQuestionIndex !== finalQuestionIndex){
         currentQuestionIndex++;
-        quesResultEl.innerHTML = "That is correct!";
+        displayStatus("That is correct!");
+
         quesResultEl.style.borderTop = "2px solid rgb(189, 189, 189)";
         quesResultEl.style.color = "rgb(189, 189, 189)";
         quesResultEl.style.marginLeft= "280px";
         quesResultEl.style.marginRight= "280px";
         quesResultEl.style.paddingTop = "20px";
         score++;
+
         generateQuestion();
     }
     else if (answer !== correctAnswer && currentQuestionIndex !== finalQuestionIndex) {
         timerCount = timerCount - 10;
         score--;
         currentQuestionIndex++;
-        quesResultEl.innerHTML ="That is incorrect.";
+        displayStatus("That is incorrect.");
+
         quesResultEl.style.borderTop = "2px solid rgb(189, 189, 189)";
         quesResultEl.style.color = "rgb(189, 189, 189)";
         quesResultEl.style.marginLeft= "280px";
         quesResultEl.style.marginRight= "280px";
         quesResultEl.style.paddingTop = "20px";
+
         generateQuestion();
     }
     else {
@@ -172,6 +188,7 @@ function startTimer() {
 // Function to display and store the users score and prompt user to enter their initials
 function setScore() {
     quizQuestionsEl.style.display="none";
+    highscorePageEl.style.display = "none";
     scoreInfoEl.style.display="block";
     timeCountdownEl.textContent = "";
     userScoreEl.textContent = "Your score: " + score;
@@ -190,6 +207,7 @@ function getHighScores () {
         var scoreboardList = document.createElement('ul');
         highscoreListEl.append(scoreboardList);
         var listItem = document.createElement('li');
+        listItem.classList.add("listItm");
         var listItemText = document.createTextNode(highscoreData[i]);
         listItem.appendChild(listItemText);
         scoreboardList.appendChild(listItem);
@@ -207,9 +225,12 @@ clearScoresEl.addEventListener("click", function clearScores(){
 });
 
 // Event listener for submit button when entering score info
-submitBtn.addEventListener("click", function storeScore(){
+submitBtn.addEventListener("click", function (){
 
-    if (userInitialsEl === "") {
+    if (userInitialsEl.value === "") {
+
+        console.log("WORKS")
+ 
         alert("You must enter your initials");
     }
     else {
@@ -228,6 +249,7 @@ playAgainEl.addEventListener("click", startQuiz);
 //Event listener for start button to start the quiz
 startButton.addEventListener("click", startQuiz);
 
+//Event listener for the View Highscores nav on top left of screen to bring user to the highscores page
 highscorelog.addEventListener("click", function() {
     scoreInfoEl.style.display="none";
     quizQuestionsEl.style.display="none";

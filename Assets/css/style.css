@@ -113,7 +113,6 @@ header h1 {
 #clearscores, #startover {
     font-weight: bolder;
     background-color: rgb(162, 157, 233);
-    width: 10%;
     height: 100%;
     border-radius: 3px;
     font-size: 12px;
@@ -121,3 +120,16 @@ header h1 {
     margin-top: 10px;
 }
 
+.listItm {
+    padding-right: 40px;
+    list-style: none;
+}
+
+.displayResult {
+    border-top: 2px, solid, rgb(189, 189, 189);
+    text: rgb(189, 189, 189);
+    font-weight: bolder;
+    margin-left: 280px;
+    margin-right: 280px;
+    padding-top: 20px;
+}
