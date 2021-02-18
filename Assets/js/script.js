@@ -148,6 +148,7 @@ function startQuiz () {
     startTimer()
     generateQuestion();
 }
+
 // Timer function to ensure the timer counts for from 75
 function startTimer() {
     timeCountdownEl.textContent = timerCount;
