@@ -106,13 +106,24 @@ Below, you can also see the additional event listeners that were used to assist 
 
 MDN Web Docs - [Document.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
 
+MDN Web Docs - [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
 W3Shools - [JavaScript DOM Event Listeners](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
 
+W3Schools - [Style Visibility Property](https://www.w3schools.com/jsref/prop_style_visibility.asp)
 
+W3Schools - [Web APIs](https://www.w3schools.com/js/js_api_intro.asp)
 
+W3Schools - [Window setTimout Method](https://www.w3schools.com/jsref/met_win_settimeout.asp)
+
+W3Schools - [HTML Web Storage API](https://www.w3schools.com/html/html5_webstorage.asp)
+
+Free Code Camp - [JavaScript Timers](https://www.freecodecamp.org/news/javascript-timers-everything-you-need-to-know-5f31eaa37162/)
+
+Lastly, the style.css sheet was created just to give the page a better looking layout. 
 
 ## Links
 
-GitHub Repository - [Generator Repository](https://github.com/ktrudickm/Coding-Quiz "Generator Repository")
+GitHub Repository - [Code-Quiz Repository](https://github.com/ktrudickm/Coding-Quiz "Coding Quiz Repository")
 
-Deployed Project - [Deployed Application](https://ktrudickm.github.io/PasswordGenerator/ "Deployed Application")
+Deployed Project - [Deployed Application](https://ktrudickm.github.io/Coding-Quiz/ "Deployed Application")
