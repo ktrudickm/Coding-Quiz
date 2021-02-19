@@ -217,8 +217,6 @@ clearScoresEl.addEventListener("click", function clearScores(){
 submitBtn.addEventListener("click", function (){
 
     if (userInitialsEl.value === "") {
-
-        console.log("WORKS")
  
         alert("You must enter your initials");
     }
