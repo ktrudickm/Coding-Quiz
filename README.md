@@ -32,6 +32,8 @@ The following animation demonstrates the application functionality:
 
 ![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/Images/Coding-Quiz-Game.gif)
 
+<br>
+
 ## Project Development Process
 
 ### HTML
@@ -49,6 +51,10 @@ The next div element section contains the Game Over scoreboard page where the us
 The final div element section is for the highscores page. Similarly to the other sections, this contains each of the highscore ranking which displays theusers score and initials. There are also two buttons to give the user the option to either play again or clear the highscores. 
 
 ![High Score Page HTML Structuring](./Assets/Images/highscorepageHTML.png)
+
+Next, we will get into how the script was created and structured given our base HTML.
+
+<br>
 
 ### Script
 
@@ -102,6 +108,10 @@ Below, you can also see the additional event listeners that were used to assist 
 
 ![Event Listeners](./Assets/Images/eventlisteners.png)
 
+Lastly, the style.css sheet was created just to give the page a better looking layout. 
+
+</br>
+
 ## Credits
 
 MDN Web Docs - [Document.querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
@@ -120,7 +130,8 @@ W3Schools - [HTML Web Storage API](https://www.w3schools.com/html/html5_webstora
 
 Free Code Camp - [JavaScript Timers](https://www.freecodecamp.org/news/javascript-timers-everything-you-need-to-know-5f31eaa37162/)
 
-Lastly, the style.css sheet was created just to give the page a better looking layout. 
+
+</br>
 
 ## Links
 
